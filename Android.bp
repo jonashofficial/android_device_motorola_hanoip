@@ -13,6 +13,14 @@ soong_namespace {
     ],
 }
 
+cc_library_shared {
+    name: "libmdmcutback",
+    vendor: true,
+    srcs: [
+        "libmdmcutback/libmdmcutback.cpp",
+    ],
+}
+
 install_symlink {
     name: "firmware_wlan_mac.bin_symlink",
     vendor: true,

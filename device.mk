@@ -428,6 +428,9 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal
 
 # SAR / MDM Cutback
+PRODUCT_PACKAGES += \
+    libmdmcutback
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sar/ctbk_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/motorola/mdmctbk/ctbk_cfg.xml
 

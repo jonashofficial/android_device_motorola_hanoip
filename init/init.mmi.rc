@@ -429,11 +429,11 @@ on property:vendor.wifi.tethering=false
     write /sys/module/wlan/parameters/sar_mhs disabled
 
 on property:vendor.wifi.tethering=true
-    write /sys/module/wlan/parameters/sar_mhs enabled
+    write /sys/module/wlan/parameters/sar_mhs disabled
 
 #Override fwpath string when wpa_supplicant server was killed
 on property:vendor.wifi.station=true
-    write /sys/module/wlan/parameters/sar_sta enabled
+    write /sys/module/wlan/parameters/sar_sta disabled
 
 on property:vendor.wifi.station=false
     write /sys/module/wlan/parameters/sar_sta disabled
