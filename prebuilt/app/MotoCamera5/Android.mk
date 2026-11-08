@@ -13,13 +13,7 @@ LOCAL_OVERRIDES_PACKAGES := Camera2 Aperture
 my_intermediates := $(call local-intermediates-dir)
 LOCAL_PREBUILT_MODULE_FILE := $(my_intermediates)/$(LOCAL_MODULE).apk
 
-MOTOCAMERA5_PARTS := \
-    $(LOCAL_PATH)/MotoCamera5.apk.partaa \
-    $(LOCAL_PATH)/MotoCamera5.apk.partab \
-    $(LOCAL_PATH)/MotoCamera5.apk.partac \
-    $(LOCAL_PATH)/MotoCamera5.apk.partad \
-    $(LOCAL_PATH)/MotoCamera5.apk.partae \
-    $(LOCAL_PATH)/MotoCamera5.apk.partaf
+MOTOCAMERA5_PARTS := $(sort $(wildcard $(LOCAL_PATH)/MotoCamera5.apk.part*))
 
 $(LOCAL_PREBUILT_MODULE_FILE): $(MOTOCAMERA5_PARTS)
 	@mkdir -p $(dir $@)
