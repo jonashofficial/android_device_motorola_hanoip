@@ -14,3 +14,8 @@ binder_call(system_app, hal_wifi_supplicant_default)
 binder_call(system_app, hal_health_default)
 binder_call(system_app, wificond)
 binder_call(system_app, artd)
+
+# Dolby Atmos
+allow system_app hal_dms_hwservice:hwservice_manager find;
+binder_call(system_app, hal_dms_default)
+

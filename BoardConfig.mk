@@ -210,5 +210,8 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
-# inherit from the proprietary version
-include hardware/motorola/dolby/BoardConfigVendor.mk
+# Dolby
+CONFIG_PATH := hardware/motorola/dolby
+include $(CONFIG_PATH)/BoardConfigVendor.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(CONFIG_PATH)/sepolicy/vendor
+

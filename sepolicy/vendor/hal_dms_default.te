@@ -1,0 +1,2 @@
+# Dolby DMS default
+binder_call(hal_dms_default, system_app)
