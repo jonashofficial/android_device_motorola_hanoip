@@ -79,4 +79,16 @@
 
     <!-- Indicate the device support request channel on Wi-Fi Aware data-path. -->
     <bool translatable="false" name="config_wifiSupportChannelOnDataPath">true</bool>
+
+    <!-- Delay in milliseconds before set wlan interface up during watchdog recovery -->
+    <integer translatable="false" name="config_wifi_framework_recovery_timeout_delay">6000</integer>
+
+    <!-- Number of self recoveries to be attempted per hour -->
+    <integer translatable="false" name="config_wifiMaxNativeFailureSelfRecoveryPerHour">8</integer>
+
+    <!-- Enable self recovery when an interface is added -->
+    <bool translatable="false" name="config_wifiInterfaceAddedSelfRecoveryEnabled">true</bool>
+
+    <!-- Interface name for self recovery -->
+    <string translatable="false" name="config_wifiSelfRecoveryInterfaceName">wlan0</string>
 </resources>
