@@ -82,7 +82,7 @@ vendor.display.disable_excl_rect_partial_fb=1
 vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_offline_rotator=1
 vendor.display.disable_scaler=0
-vendor.display.enable_optimize_refresh=1
+vendor.display.enable_optimize_refresh=0
 vendor.display.enable_posted_start_dyn=0
 vendor.display.idle_time=0
 vendor.display.use_smooth_motion=1
@@ -205,7 +205,7 @@ persist.vendor.sensors.odl.adsp=true
 ro.vendor.sensors.mot_ltv=true
 
 # SurfaceFlinger
-ro.surface_flinger.enable_frame_rate_override=false
+ro.surface_flinger.enable_frame_rate_override=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.protected_contents=true
