@@ -119,3 +119,16 @@ on property:ro.bootmode=normal
     write /sys/module/usb3813_hub/parameters/boost_val 5
 on property:ro.bootmode=mot-factory
     write /sys/module/usb3813_hub/parameters/boost_val 5
+
+# Dolby DMS Service Override
+service dms-hal-2-0 /vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+    override
+    class hal
+    user media
+    group audio media
+    interface vendor.dolby.hardware.dms@2.0::IDms default
+
+on post-fs-data
+    mkdir /data/vendor/dolby 0770 media media
+    chmod 0770 /data/vendor/dolby
+    chown media media /data/vendor/dolby

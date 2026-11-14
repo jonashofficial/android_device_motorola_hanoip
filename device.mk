@@ -65,7 +65,9 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Dolby
-$(call inherit-product, hardware/motorola/dolby/setup.mk)
+# The vendored runtime provides both the DAP effects and the Codec2 store.
+# It also builds LunarisDolby, so it must not be added here as well.
+$(call inherit-product, $(LOCAL_PATH)/dolby/dolby.mk)
 
 # Properties (managed in BoardConfig.mk via properties/*.prop)
 
