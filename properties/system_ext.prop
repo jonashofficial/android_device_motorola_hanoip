@@ -12,3 +12,4 @@ ro.telephony.default_network=9,9
 
 # SystemUI
 persist.sysui.disableBlur=false
+persist.sys.sf.disable_blurs=0

@@ -652,4 +652,7 @@
     <!-- Expected value from fast charging status file  -->
     <string name="config_oemFastChargerStatusValue" translatable="false">Fast</string>
 
+    <!-- Enable background blur effects -->
+    <bool name="config_windowEnableBlurs">true</bool>
+
 </resources>

@@ -3,6 +3,9 @@ on property:sys.boot_completed=1
     start vendor.qrtr-lookup-sh
     # Ensure hardware overlays are enabled on boot (force-disable "Disable HW overlays")
     exec_background u:r:su:s0 root root -- /system/bin/service call SurfaceFlinger 1008 i32 0
+    # Enable background window blurs
+    exec_background u:r:su:s0 root root -- /system/bin/settings put global disable_window_blurs 0
+    exec_background u:r:su:s0 root root -- /system/bin/setprop persist.sys.sf.disable_blurs 0
 
 
 on early-init
