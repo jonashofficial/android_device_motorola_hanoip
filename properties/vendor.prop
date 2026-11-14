@@ -92,10 +92,10 @@ persist.vendor.overlay.izat.optin=rro
 
 # Graphics
 debug.mdpcomp.logs=0
-debug.sf.auto_latch_unsignaled=0
+debug.sf.auto_latch_unsignaled=1
 debug.sf.disable_client_composition_cache=0
 debug.sf.enable_adpf_cpu_hint=true
-debug.sf.enable_gl_backpressure=1
+debug.sf.enable_gl_backpressure=0
 debug.sf.enable_hwc_vds=0
 debug.sf.latch_unsignaled=1
 persist.demo.hdmirotationlock=false
@@ -192,8 +192,8 @@ ro.vendor.use_data_netmgrd=true
 
 # Refresh Rate
 ro.surface_flinger.set_display_power_timer_ms=1000
-ro.surface_flinger.set_idle_timer_ms=80
-ro.surface_flinger.set_touch_timer_ms=200
+ro.surface_flinger.set_idle_timer_ms=1000
+ro.surface_flinger.set_touch_timer_ms=1000
 ro.surface_flinger.supports_background_blur=1
 ro.surface_flinger.game_default_frame_rate_override=120
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
