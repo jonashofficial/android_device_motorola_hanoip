@@ -99,6 +99,12 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.mmi.dolby-migrate.sh",
+    src: "init.mmi.dolby-migrate.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.mmi.laser.sh",
     src: "init.mmi.laser.sh",
     vendor: true,

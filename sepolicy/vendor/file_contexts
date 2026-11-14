@@ -21,7 +21,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.hanoip               u:object_r:hal_light_default_exec:s0
 
 # Vendor init scripts
-/(vendor|system/vendor)/bin/init\.mmi\.(touch|laser|usb)\.sh               u:object_r:vendor_qti_init_shell_exec:s0
+/(vendor|system/vendor)/bin/init\.mmi\.(touch|laser|usb|dolby-migrate)\.sh u:object_r:vendor_qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/init\.oem\.hw\.sh                              u:object_r:vendor_qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/init\.oem\.(fingerprint|fingerprint2)\.sh      u:object_r:vendor_init_fingerprint_exec:s0
 

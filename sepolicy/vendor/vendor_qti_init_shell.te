@@ -15,3 +15,7 @@ allow vendor_qti_init_shell vendor_sysfs_touch:file { setattr rw_file_perms };
 r_dir_file(vendor_qti_init_shell, fsg_firmware_file)
 allow vendor_qti_init_shell proc_moto_boot:dir r_dir_perms;
 allow vendor_qti_init_shell proc_moto_boot:file rw_file_perms;
+
+# Dolby migration
+allow vendor_qti_init_shell vendor_data_file:dir { rw_dir_perms create_dir_perms };
+allow vendor_qti_init_shell vendor_data_file:file { rw_file_perms create_file_perms unlink setattr };

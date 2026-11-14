@@ -123,6 +123,14 @@ on property:ro.bootmode=normal
 on property:ro.bootmode=mot-factory
     write /sys/module/usb3813_hub/parameters/boost_val 5
 
+# Dolby Migration Service
+service vendor.dolby-migrate-sh /vendor/bin/init.mmi.dolby-migrate.sh
+    class core
+    user root
+    group media
+    oneshot
+    disabled
+
 # Dolby DMS Service Override
 service dms-hal-2-0 /vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
     override
@@ -135,3 +143,4 @@ on post-fs-data
     mkdir /data/vendor/dolby 0770 media media
     chmod 0770 /data/vendor/dolby
     chown media media /data/vendor/dolby
+    exec_start vendor.dolby-migrate-sh

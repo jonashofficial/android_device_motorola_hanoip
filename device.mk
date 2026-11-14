@@ -207,6 +207,7 @@ PRODUCT_PACKAGES += \
     init.crda.sh \
     init.hanoip.rc \
     init.mmi.chipset.rc \
+    init.mmi.dolby-migrate.sh \
     init.mmi.rc \
     init.mmi.laser.sh \
     init.mmi.overlay.rc \
